@@ -1,0 +1,61 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Testimonial {
+  id        String   @id @default(cuid())
+  name      String
+  role      String
+  company   String
+  quote     String   @db.Text
+  rating    Int      @default(5)
+  avatarUrl String?
+  featured  Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model PricingPlan {
+  id           String   @id @default(cuid())
+  name         String
+  slug         String   @unique
+  monthlyPrice Int
+  yearlyPrice  Int
+  description  String
+  features     String[]
+  isFeatured   Boolean  @default(false)
+  order        Int      @default(0)
+}
+
+model Stat {
+  id     String @id @default(cuid())
+  label  String
+  value  String
+  suffix String?
+  order  Int    @default(0)
+}
+
+model ContactSubmission {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  company   String?
+  message   String   @db.Text
+  createdAt DateTime @default(now())
+}
+
+model FreeTrialLead {
+  id             String   @id @default(cuid())
+  fullName       String
+  email          String
+  phone          String?
+  companyName    String
+  servicesNeeded String[]
+  employeeCount  String?
+  createdAt      DateTime @default(now())
+}

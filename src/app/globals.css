@@ -1,0 +1,113 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* ---------- Custom DaisyUI Theme ---------- */
+@plugin "daisyui/theme" {
+  name: "iaccounts";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: #ffffff;
+  --color-base-200: #f6f8f9;
+  --color-base-300: #e7ecef;
+  --color-base-content: #0b1f3a;
+
+  --color-primary: #0f9d6d;
+  --color-primary-content: #ffffff;
+
+  --color-secondary: #0b1f3a;
+  --color-secondary-content: #ffffff;
+
+  --color-accent: #f5b841;
+  --color-accent-content: #0b1220;
+
+  --color-neutral: #0b1220;
+  --color-neutral-content: #ffffff;
+
+  --color-info: #3abeff;
+  --color-info-content: #0b1220;
+
+  --color-success: #16a34a;
+  --color-success-content: #ffffff;
+
+  --color-warning: #f59e0b;
+  --color-warning-content: #0b1220;
+
+  --color-error: #ef4444;
+  --color-error-content: #ffffff;
+
+  --radius-selector: 1rem;
+  --radius-field: 0.75rem;
+  --radius-box: 1.5rem;
+
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+/* ---------- Custom Theme Tokens (fonts, backgrounds, animations) ---------- */
+@theme {
+  --font-display: var(--font-space-grotesk), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+
+  --animate-fade-up: fadeUp 0.7s ease forwards;
+  --animate-marquee: marquee 25s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+}
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(24px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* ---------- Base ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-base-100);
+  color: var(--color-secondary);
+  font-family: var(--font-body);
+}
+
+::selection {
+  background-color: color-mix(in oklab, var(--color-primary) 20%, transparent);
+}
+
+.section-container {
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.bg-ledger-lines {
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 39px,
+    color-mix(in oklab, var(--color-primary) 6%, transparent) 40px
+  );
+}
+
+.bg-radial-fade {
+  background-image: radial-gradient(
+    circle at top right,
+    color-mix(in oklab, var(--color-primary) 15%, transparent),
+    transparent 60%
+  );
+}
