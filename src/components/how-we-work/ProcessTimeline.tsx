@@ -26,7 +26,7 @@ export default function ProcessTimeline() {
   }, []);
 
   return (
-    <section id="process" className="py-24 bg-base-100">
+    <section id="process" className="py-16 md:py-18 bg-base-100">
       <div className="section-container grid lg:grid-cols-[280px_1fr] gap-16">
         {/* Sticky side nav */}
         <aside className="hidden lg:block">

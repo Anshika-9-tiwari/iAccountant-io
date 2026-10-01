@@ -4,7 +4,7 @@ import { Plug } from "lucide-react";
 
 export default function ToolsStack() {
   return (
-    <section className="py-24 bg-base-200">
+    <section className="py-16 md:py-18 bg-base-200">
       <div className="section-container">
         <SectionHeading
           eyebrow="Tools We Work With"

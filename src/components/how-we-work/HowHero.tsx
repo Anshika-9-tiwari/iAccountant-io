@@ -4,8 +4,8 @@ import { ArrowRight, Workflow } from "lucide-react";
 export default function HowHero() {
   return (
     <section className="relative overflow-hidden bg-secondary bg-ledger-lines">
-      <div className="section-container py-20 lg:py-28 text-center relative z-10">
-        <span className="inline-flex items-center gap-2 badge badge-outline text-primary border-primary/40 py-4 px-4 mb-6">
+      <div className="section-container py-18 md:py-22 text-center relative z-10">
+        <span className="inline-flex items-center gap-2 badge badge-outline text-primary border-primary/75 py-4 px-6 mb-6 backdrop-blur-lg">
           <Workflow size={14} /> Our Process
         </span>
         <h1 className="font-display text-5xl lg:text-6xl font-bold text-white leading-[1.1] max-w-4xl mx-auto">
@@ -31,12 +31,12 @@ export default function HowHero() {
       </div>
 
       {/* decorative floating cards */}
-      <div className="absolute top-16 left-8 hidden lg:block bg-white/5 border border-white/10 rounded-2xl p-4 backdrop-blur-sm animate-float">
-        <p className="text-xs text-white/50">Avg. Monthly Close</p>
+      <div className="absolute top-16 left-8 hidden lg:block bg-white/5 border border-white/40 rounded-2xl p-4 backdrop-blur-md animate-float">
+        <p className="text-xs text-white/75">Avg. Monthly Close</p>
         <p className="text-white font-display font-bold text-xl">3 days</p>
       </div>
-      <div className="absolute bottom-16 right-8 hidden lg:block bg-white/5 border border-white/10 rounded-2xl p-4 backdrop-blur-sm animate-float" style={{ animationDelay: "1s" }}>
-        <p className="text-xs text-white/50">Human-Reviewed</p>
+      <div className="absolute bottom-16 right-8 hidden lg:block bg-white/5 border border-white/40 rounded-2xl p-4 backdrop-blur-md animate-float" style={{ animationDelay: "1s" }}>
+        <p className="text-xs text-white/75">Human-Reviewed</p>
         <p className="text-white font-display font-bold text-xl">100%</p>
       </div>
     </section>

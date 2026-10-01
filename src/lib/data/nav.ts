@@ -17,7 +17,7 @@ export const services = [
   {
     name: "Account Compilation",
     href: "/services/account-compilation",
-    desc: "Prepare structured financial statements ",
+    desc: "Audit-ready financial statements, compiled by CPAs",
   },
 ];
 

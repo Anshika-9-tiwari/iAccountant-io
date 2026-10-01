@@ -3,9 +3,9 @@ import { ArrowRight, PhoneCall } from "lucide-react";
 
 export default function HowCTA() {
   return (
-    <section className="py-24 bg-base-200">
+    <section className="py-16 md:py-18 bg-base-200">
       <div className="section-container">
-        <div className="bg-gradient-to-br from-primary to-primary/80 rounded-[2.5rem] p-10 lg:p-16 relative overflow-hidden">
+        <div className="bg-gradient-to-br from-primary to-primary/80 rounded-[2.5rem] p-8 lg:p-14 relative overflow-hidden">
           <div className="absolute inset-0 bg-ledger-lines opacity-20" />
           <div className="relative z-10 grid lg:grid-cols-2 gap-8 items-center">
             <div>
@@ -25,12 +25,12 @@ export default function HowCTA() {
               >
                 Start Free Trial <ArrowRight size={18} />
               </Link>
-              <Link
-                href="/contact-us"
-                className="btn btn-outline text-white border-white/60 rounded-full px-8 hover:bg-white hover:text-primary"
-              >
+
+              <a href="tel:+9198100 17750" 
+                className="btn btn-outline text-white border-white/60 rounded-full px-8 hover:bg-white hover:text-primary">
                 <PhoneCall size={18} /> Book a Call
-              </Link>
+              </a>
+
             </div>
           </div>
         </div>
@@ -38,3 +38,4 @@ export default function HowCTA() {
     </section>
   );
 }
+// +91 

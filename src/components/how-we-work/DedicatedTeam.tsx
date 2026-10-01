@@ -24,7 +24,7 @@ const team = [
 
 export default function DedicatedTeam() {
   return (
-    <section className="py-24 bg-base-100">
+    <section className="py-16 md:py-18 bg-base-100">
       <div className="section-container">
         <SectionHeading
           eyebrow="Your Team"

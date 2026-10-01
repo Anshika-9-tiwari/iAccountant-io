@@ -3,7 +3,7 @@ import { faqs } from "@/lib/data/how-we-work";
 
 export default function FAQSection() {
   return (
-    <section className="py-24 bg-base-100">
+    <section className="py-16 md:py-18 bg-base-100">
       <div className="section-container max-w-4xl">
         <SectionHeading
           eyebrow="Common Questions"
