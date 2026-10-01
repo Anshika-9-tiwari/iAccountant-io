@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space-grotesk" });
 
 export const metadata: Metadata = {
-  title: "iAccounts.ai | AI-Powered Bookkeeping & Accounting",
+  title: "iAccountant.io | AI-Powered Bookkeeping & Accounting",
   description:
     "Bookkeeping, accounts payable/receivable, and tax preparation — automated by AI, verified by real accountants.",
 };

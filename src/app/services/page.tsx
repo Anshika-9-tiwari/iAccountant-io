@@ -6,7 +6,7 @@ import TestimonialSection from "@/components/home/TestimonialSection";
 import FinalCTA from "@/components/home/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "Services | iAccounts.ai",
+  title: "Services | iAccountant.io",
   description:
     "Bookkeeping, accounts payable & receivable, tax preparation, and account compilation — all handled by one dedicated team.",
 };
