@@ -26,7 +26,7 @@ export default function HowCTA() {
                 Start Free Trial <ArrowRight size={18} />
               </Link>
 
-              <a href="tel:+9198100 17750" 
+              <a href="tel:+919810017750" 
                 className="btn btn-outline text-white border-white/60 rounded-full px-8 hover:bg-white hover:text-primary">
                 <PhoneCall size={18} /> Book a Call
               </a>

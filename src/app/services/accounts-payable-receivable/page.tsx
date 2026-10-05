@@ -6,7 +6,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { apArFeatures } from "@/lib/data/services";
 
 export const metadata: Metadata = {
-  title: "Accounts Payable & Receivable | iAccounts.ai",
+  title: "Accounts Payable & Receivable | iAccountant.io",
 };
 
 export default function APARPage() {
@@ -19,11 +19,11 @@ export default function APARPage() {
         highlight="actively managed."
         desc="We handle vendor bills, customer invoicing, and collections — so you always know what's coming in, what's going out, and what's at risk."
         image="https://images.pexels.com/photos/6693655/pexels-photo-6693655.jpeg"
-        accent="info"
+        accent="primary"
       />
 
       {/* Split AP vs AR */}
-      <section className="py-24 bg-base-100">
+      <section className="py-18 md:py-20 bg-base-100">
         <div className="section-container">
           <SectionHeading
             eyebrow="Two Workflows, One Team"
@@ -33,22 +33,22 @@ export default function APARPage() {
           <div className="grid md:grid-cols-2 gap-6">
             {/* Payables */}
             <div className="bg-base-100 border border-base-300 rounded-3xl p-8 hover:shadow-xl transition-all">
-              <div className="w-14 h-14 rounded-2xl bg-info/10 flex items-center justify-center mb-6">
-                <ArrowUpRight className="text-info" size={26} />
+              <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
+                <ArrowUpRight className="text-primary" size={26} />
               </div>
-              <span className="text-info text-xs font-semibold uppercase tracking-wider">
+              <span className="text-primary text-xs font-semibold uppercase tracking-wider">
                 Accounts Payable
               </span>
               <h3 className="font-display font-bold text-2xl text-secondary mt-2 mb-6">
                 Money going out
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-2">
                 {apArFeatures.payable.map((f, i) => (
                   <li
                     key={i}
                     className="flex items-start gap-3 py-2 border-b border-base-200 last:border-0"
                   >
-                    <span className="w-6 h-6 rounded-full bg-info/10 text-info text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="w-6 h-6 rounded-full bg-primary/10 text-primary text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
                       {i + 1}
                     </span>
                     <span className="text-secondary/80 text-sm">{f}</span>
@@ -58,7 +58,7 @@ export default function APARPage() {
             </div>
 
             {/* Receivables */}
-            <div className="bg-secondary rounded-3xl p-8 text-white">
+            <div className="bg-base-200 bg-radial-fade bg-ledger-lines  rounded-3xl p-8 text-secondary">
               <div className="w-14 h-14 rounded-2xl bg-primary/20 flex items-center justify-center mb-6">
                 <ArrowDownLeft className="text-primary" size={26} />
               </div>
@@ -68,7 +68,7 @@ export default function APARPage() {
               <h3 className="font-display font-bold text-2xl mt-2 mb-6">
                 Money coming in
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-2">
                 {apArFeatures.receivable.map((f, i) => (
                   <li
                     key={i}
@@ -77,7 +77,7 @@ export default function APARPage() {
                     <span className="w-6 h-6 rounded-full bg-primary/20 text-primary text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
                       {i + 1}
                     </span>
-                    <span className="text-white/80 text-sm">{f}</span>
+                    <span className="text-secondary/80 text-sm">{f}</span>
                   </li>
                 ))}
               </ul>
@@ -98,7 +98,7 @@ export default function APARPage() {
               key={i}
               className="bg-base-100 border border-base-300 rounded-3xl p-8 text-center"
             >
-              <p className="font-display text-4xl font-bold text-info">{s.stat}</p>
+              <p className="font-display text-4xl font-bold text-primary">{s.stat}</p>
               <p className="text-secondary/60 mt-2 text-sm">{s.label}</p>
             </div>
           ))}
@@ -108,7 +108,7 @@ export default function APARPage() {
       <ServiceSubCTA
         title="Stop chasing invoices. Start collecting."
         desc="Let us take over your AP/AR workflow this month — you'll feel the difference by week two."
-        cardColor="from-info to-info/70"
+        cardColor="from-primary to-primary/70"
       />
     </>
   );

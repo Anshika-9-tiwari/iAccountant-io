@@ -6,7 +6,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { taxServices, taxCalendar } from "@/lib/data/services";
 
 export const metadata: Metadata = {
-  title: "Tax Preparation Services | iAccounts.ai",
+  title: "Tax Preparation Services | iAccountant.io",
 };
 
 export default function TaxPrepPage() {
@@ -19,11 +19,11 @@ export default function TaxPrepPage() {
         highlight="handled calmly."
         desc="Federal, state, sales, and quarterly estimated taxes — prepared, reviewed, and filed by licensed tax professionals. No surprises, no penalties."
         image="https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg"
-        accent="accent"
+        accent="primary"
       />
 
       {/* Services covered */}
-      <section className="py-24 bg-base-100">
+      <section className="py-16 md:py-18 bg-base-100">
         <div className="section-container">
           <SectionHeading
             eyebrow="Tax Services"
@@ -33,10 +33,10 @@ export default function TaxPrepPage() {
             {taxServices.map((s, i) => (
               <div
                 key={i}
-                className="bg-base-100 border border-base-300 rounded-3xl p-8 flex gap-5 hover:border-accent hover:shadow-lg transition-all"
+                className="bg-base-100 border border-base-300 rounded-3xl p-8 flex gap-5 hover:border-primary hover:shadow-lg transition-all"
               >
-                <div className="w-14 h-14 rounded-2xl bg-accent/15 flex items-center justify-center shrink-0">
-                  <s.icon className="text-accent" size={26} />
+                <div className="w-14 h-14 rounded-2xl bg-primary/15 flex items-center justify-center shrink-0">
+                  <s.icon className="text-primary" size={26} />
                 </div>
                 <div>
                   <h3 className="font-display font-bold text-xl text-secondary mb-2">
@@ -51,21 +51,21 @@ export default function TaxPrepPage() {
       </section>
 
       {/* Tax calendar */}
-      <section className="py-24 bg-secondary bg-ledger-lines">
+      <section className="py-16 md:py-20 bg-secondary/85 bg-ledger-lines">
         <div className="section-container">
           <SectionHeading
             eyebrow="Never Miss a Deadline"
             title="Your tax year, mapped out"
             dark
-          />
+          /> 
 
           <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-4">
             {taxCalendar.map((item, i) => (
               <div
                 key={i}
-                className="bg-white/5 border border-white/10 rounded-2xl p-5 text-center backdrop-blur-sm hover:bg-white/10 transition-colors"
+                className="bg-white/5 border border-white/20 rounded-2xl p-5 text-center backdrop-blur-sm hover:bg-white/10 transition-colors"
               >
-                <p className="font-display font-bold text-accent text-2xl">
+                <p className="font-display font-bold text-primary text-2xl">
                   {item.month}
                 </p>
                 <p className="text-white/70 text-xs mt-2 leading-relaxed">
@@ -78,11 +78,11 @@ export default function TaxPrepPage() {
       </section>
 
       {/* Compliance badges */}
-      <section className="py-16 bg-base-200">
+      <section className="py-14 bg-base-200">
         <div className="section-container">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3">
-              <ShieldCheck className="text-accent" size={28} />
+              <ShieldCheck className="text-primary" size={28} />
               <p className="font-display font-semibold text-secondary">
                 Prepared and signed by IRS-licensed professionals
               </p>
@@ -99,7 +99,7 @@ export default function TaxPrepPage() {
       <ServiceSubCTA
         title="Get ahead of tax season this year"
         desc="Book a free tax strategy call — we'll review your current setup and identify savings opportunities before year-end."
-        cardColor="from-accent to-accent/70"
+        cardColor="from-primary to-secondary"
       />
     </>
   );

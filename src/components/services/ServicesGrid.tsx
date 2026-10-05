@@ -24,7 +24,7 @@ export default function ServicesGrid() {
               >
                 <div className="flex items-start justify-between mb-6">
                   <div className={`w-14 h-14 rounded-2xl ${a.bg} flex items-center justify-center`}>
-                    <service.icon className={a.text} size={26} />
+                    <service.icon className={a.text} size={26} /> 
                   </div>
                   <ArrowUpRight
                     className={`${a.text} opacity-0 group-hover:opacity-100 transition-opacity`}

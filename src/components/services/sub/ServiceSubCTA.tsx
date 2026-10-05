@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Calendar } from "lucide-react";
+import { ArrowRight, Calendar, PhoneCall } from "lucide-react";
 
 export default function ServiceSubCTA({
   title,
@@ -11,7 +11,7 @@ export default function ServiceSubCTA({
   cardColor?: string;
 }) {
   return (
-    <section className="py-24 bg-base-100">
+    <section className="py-20 bg-base-100">
       <div className="section-container">
         <div className={`bg-gradient-to-br ${cardColor} rounded-[2.5rem] p-10 lg:p-16 relative overflow-hidden`}>
           <div className="absolute inset-0 bg-ledger-lines opacity-20" />
@@ -29,12 +29,10 @@ export default function ServiceSubCTA({
               >
                 Start Free Trial <ArrowRight size={18} />
               </Link>
-              <Link
-                href="/contact-us"
-                className="btn btn-outline text-white border-white/60 rounded-full px-8 hover:bg-white hover:text-secondary"
-              >
-                <Calendar size={18} /> Book a Call
-              </Link>
+              <a href="tel:+919810017750" 
+                className="btn btn-outline text-white border-white/60 rounded-full px-8 hover:bg-white hover:text-primary">
+                <PhoneCall size={18} /> Book a Call
+              </a>
             </div>
           </div>
         </div>

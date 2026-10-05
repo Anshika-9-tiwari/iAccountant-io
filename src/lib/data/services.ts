@@ -33,7 +33,7 @@ export const servicesOverview = [
     title: "Accounts Payable & Receivable",
     tagline: "Cash flow, managed end-to-end",
     desc: "Automated invoicing, bill payments, collections, and vendor management — all in one workflow.",
-    accent: "info", // blue
+    accent: "primary",
     href: "/services/accounts-payable-receivable",
   },
   {
@@ -42,7 +42,7 @@ export const servicesOverview = [
     title: "Tax Preparation",
     tagline: "Compliant and stress-free",
     desc: "Federal, state, and sales tax filing — prepared, reviewed, and filed by licensed tax professionals.",
-    accent: "accent", // gold
+    accent: "primary", 
     href: "/services/tax-preparation",
   },
   {
@@ -51,7 +51,7 @@ export const servicesOverview = [
     title: "Account Compilation",
     tagline: "Audit-ready financials",
     desc: "CPA-compiled financial statements for lenders, investors, and compliance — formatted to GAAP standards.",
-    accent: "secondary", // deep navy
+    accent: "primary",
     href: "/services/account-compilation",
   },
 ];
