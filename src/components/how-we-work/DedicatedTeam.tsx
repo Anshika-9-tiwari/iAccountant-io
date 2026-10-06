@@ -41,7 +41,7 @@ export default function DedicatedTeam() {
               <span className="absolute top-6 right-6 text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">
                 {member.tag}
               </span>
-              <div className="w-14 h-14 rounded-2xl bg-secondary flex items-center justify-center mb-6">
+              <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
                 <member.icon className="text-primary" size={26} />
               </div>
               <h3 className="font-display font-bold text-lg text-secondary mb-3">

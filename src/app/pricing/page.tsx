@@ -7,7 +7,7 @@ import PricingFAQ from "@/components/pricing/PricingFAQ";
 import PricingCTA from "@/components/pricing/PricingCTA";
 import PricingHero from "@/components/pricing/PricingHero";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = {  
   title: "Pricing | iAccountant.io",
   description:
     "Simple, transparent pricing for AI-powered bookkeeping, AP/AR, tax prep, and account compilation. Plans start at $199/mo.",

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, PhoneCall } from "lucide-react";
 
 export default function FinalCTA() {
   return (
@@ -15,10 +15,11 @@ export default function FinalCTA() {
         <div className="flex justify-center gap-4 mt-8 flex-wrap">
           <Link href="/free-trial" className="btn btn-primary rounded-full px-8 text-white">
             Start Free Trial <ArrowRight size={18} />
-          </Link>
-          <Link href="/contact-us" className="btn btn-outline text-white border-white/30 rounded-full px-8 hover:bg-white hover:text-secondary">
-            Talk to an Expert
-          </Link>
+          </Link>   
+          <a href="tel:+919810017750" 
+             className="btn btn-outline text-white border-white/50 rounded-full px-8 hover:bg-white hover:text-secondary">
+             <PhoneCall size={18} /> Talk to an Expert
+          </a>
         </div>
       </div>
     </section>
