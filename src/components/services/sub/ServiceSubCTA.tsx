@@ -20,17 +20,17 @@ export default function ServiceSubCTA({
               <h2 className="font-display text-3xl md:text-4xl font-bold text-white leading-tight">
                 {title}
               </h2>
-              <p className="text-white/80 mt-4 max-w-lg">{desc}</p>
+              <p className="text-white/85 text-[17px] mt-4 max-w-lg">{desc}</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 lg:justify-end">
               <Link
                 href="/free-trial"
-                className="btn bg-white text-secondary hover:bg-white/90 border-none rounded-full px-8"
+                className="btn bg-white text-secondary hover:bg-white/90 btn-md tracking-wide text-[16px]  border-none rounded-full px-8"
               >
                 Start Free Trial <ArrowRight size={18} />
               </Link>
-              <a href="tel:+919810017750" 
-                className="btn btn-outline text-white border-white/60 rounded-full px-8 hover:bg-white hover:text-primary">
+              <a href="tel:+18002948513" 
+                className="btn btn-outline btn-md tracking-wide text-[16px]  text-white border-white/60 rounded-full px-8 hover:bg-white hover:text-primary">
                 <PhoneCall size={18} /> Book a Call
               </a>
             </div>

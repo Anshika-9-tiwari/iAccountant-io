@@ -42,7 +42,7 @@ export default function TaxPrepPage() {
                   <h3 className="font-display font-bold text-xl text-secondary mb-2">
                     {s.title}
                   </h3>
-                  <p className="text-secondary/60">{s.desc}</p>
+                  <p className="text-secondary/60 font-medium">{s.desc}</p>
                 </div>
               </div>
             ))}
@@ -51,7 +51,7 @@ export default function TaxPrepPage() {
       </section>
 
       {/* Tax calendar */}
-      <section className="py-16 md:py-20 bg-secondary/85 bg-ledger-lines">
+      <section className="py-16 md:py-18 bg-secondary/85 bg-ledger-lines">
         <div className="section-container">
           <SectionHeading
             eyebrow="Never Miss a Deadline"
@@ -68,7 +68,7 @@ export default function TaxPrepPage() {
                 <p className="font-display font-bold text-primary text-2xl">
                   {item.month}
                 </p>
-                <p className="text-white/70 text-xs mt-2 leading-relaxed">
+                <p className="text-white/75 text-xs mt-2.5 leading-relaxed">
                   {item.event}
                 </p>
               </div>
@@ -87,7 +87,7 @@ export default function TaxPrepPage() {
                 Prepared and signed by IRS-licensed professionals
               </p>
             </div>
-            <div className="flex flex-wrap gap-6 text-secondary/40 font-display font-bold text-sm">
+            <div className="flex flex-wrap gap-6 text-secondary/45 font-display font-bold text-sm">
               <span>IRS-PTIN Registered</span>
               <span>AICPA Member</span>
               <span>State Board Licensed</span>

@@ -12,17 +12,17 @@ export default function ServicesHero() {
           Everything your business needs for{" "}
           <span className="text-primary">clean, compliant finances.</span>
         </h1>
-        <p className="text-lg text-secondary/60 mt-6 max-w-2xl mx-auto">
+        <p className="text-xl text-secondary/65 mt-6 max-w-2xl mx-auto">
           From daily bookkeeping to compiled financial statements — all handled
           by one dedicated team of certified accountants, backed by AI that
           eliminates the busywork.
         </p>
 
         <div className="flex flex-wrap gap-4 mt-10 justify-center">
-          <Link href="/free-trial" className="btn btn-primary rounded-full px-6 text-white">
+          <Link href="/free-trial" className="btn btn-primary rounded-full px-6 text-lg  text-white">
             Start Free Trial <ArrowRight size={18} />
           </Link>
-          <Link href="/pricing" className="btn btn-outline rounded-full px-6">
+          <Link href="/pricing" className="btn btn-outline text-lg rounded-full px-7">
             See Pricing
           </Link>
         </div>

@@ -16,24 +16,24 @@ export default function PricingCTA() {
         <div className="flex flex-wrap gap-4 mt-10 justify-center">
           <Link
             href="/free-trial"
-            className="btn btn-primary rounded-full px-8 text-white"
+            className="btn btn-primary btn-md text-[16px] rounded-full px-8 text-white"
           >
             Start Free Trial <ArrowRight size={18} />
           </Link>
           <Link
             href="/contact-us"
-            className="btn btn-outline btn-primary bg-white rounded-full px-8 hover:bg-base-200 hover:text-primary"
+            className="btn btn-outline btn-md text-[16px] btn-primary bg-white rounded-full px-8 hover:bg-base-200 hover:text-primary"
           >
             <MessageCircle size={18} /> Talk to Sales
           </Link>
-          <a href="tel:+919810017750" 
-             className="btn  btn-primary rounded-full px-8 hover:bg-base-200 hover:text-primary">
+          <a href="tel:+18002948513" 
+             className="btn  btn-primary btn-md text-[16px] rounded-full px-8 hover:bg-base-200 hover:text-primary">
              <PhoneCall size={18} /> Book a Call
           </a>
 
         </div>
 
-        <div className="flex flex-wrap justify-center gap-8 mt-14 text-secondary/50 text-sm">
+        <div className="flex flex-wrap justify-center gap-8 mt-14 text-secondary/60 text-sm">
           <span>✓ 14-day free trial</span>
           <span>✓ No credit card required</span>
           <span>✓ Cancel anytime</span>

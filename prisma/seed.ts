@@ -1,16 +1,37 @@
-import {prisma} from '@/lib/prisma'
+import { PrismaClient } from "../generated/prisma/client";
+import { PrismaPg } from "@prisma/adapter-pg";
+import * as dotenv from "dotenv";
+
+dotenv.config();
+
+const connectionString = process.env.DATABASE_URL;
+
+if (!connectionString) {
+  throw new Error("DATABASE_URL not found. Check your .env file.");
+}
+
+const adapter = new PrismaPg({ connectionString });
+const prisma = new PrismaClient({ adapter });
 
 async function main() {
   console.log("🌱 Seeding database...");
 
+  // ── Clear existing data (idempotent) ──
+  await prisma.freeTrialLead.deleteMany();
+  await prisma.contactSubmission.deleteMany();
+  await prisma.stat.deleteMany();
+  await prisma.pricingPlan.deleteMany();
+  await prisma.testimonial.deleteMany();
+  console.log("  ✓ Cleared existing data");
+
+  // ── Testimonials ──
   await prisma.testimonial.createMany({
     data: [
       {
         name: "Sarah Johnson",
         role: "CEO",
         company: "RetailCo",
-        quote:
-          "iAccountant.io cut our monthly close time in half. Their AI + human review combo is unmatched.",
+        quote: "iAccounts cut our monthly close time in half. Their AI + human review combo is unmatched.",
         rating: 5,
         featured: true,
       },
@@ -37,14 +58,16 @@ async function main() {
       },
     ],
   });
+  console.log("  ✓ Testimonials seeded");
 
+  // ── Pricing Plans ──
   await prisma.pricingPlan.createMany({
     data: [
       {
         name: "Starter",
         slug: "starter",
         monthlyPrice: 199,
-        yearlyPrice: 1990,
+        yearlyPrice: 1890,
         description: "For solopreneurs and small teams doing under $500K in revenue.",
         features: [
           "Monthly bookkeeping (up to 200 transactions)",
@@ -60,7 +83,7 @@ async function main() {
       {
         name: "Growth",
         slug: "growth",
-        monthlyPrice: 499,
+        monthlyPrice: 399,
         yearlyPrice: 4990,
         description: "For growing businesses that need weekly books and AP/AR management.",
         features: [
@@ -79,7 +102,7 @@ async function main() {
       {
         name: "Scale",
         slug: "scale",
-        monthlyPrice: 899,
+        monthlyPrice: 699,
         yearlyPrice: 8990,
         description: "For established businesses with complex finances and multi-entity needs.",
         features: [
@@ -99,7 +122,9 @@ async function main() {
       },
     ],
   });
+  console.log("  ✓ Pricing plans seeded");
 
+  // ── Stats ──
   await prisma.stat.createMany({
     data: [
       { label: "Businesses Served", value: "2,400", suffix: "+", order: 1 },
@@ -108,6 +133,7 @@ async function main() {
       { label: "Avg. Response Time", value: "2", suffix: "hrs", order: 4 },
     ],
   });
+  console.log("  ✓ Stats seeded");
 
   console.log("✅ Seed completed successfully.");
 }

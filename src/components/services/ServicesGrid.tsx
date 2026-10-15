@@ -38,9 +38,9 @@ export default function ServicesGrid() {
                 <h3 className="font-display text-2xl font-bold text-secondary mb-3">
                   {service.title}
                 </h3>
-                <p className="text-secondary/60 leading-relaxed">{service.desc}</p>
+                <p className="text-secondary/75  leading-relaxed">{service.desc}</p>
 
-                <span className={`inline-flex items-center gap-1 mt-6 font-semibold text-sm ${a.text}`}>
+                <span className={`inline-flex items-center gap-1 mt-6 font-semibold text-[15px] ${a.text}`}>
                   Explore {service.title} →
                 </span>
               </Link>

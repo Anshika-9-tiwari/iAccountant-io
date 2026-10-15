@@ -22,7 +22,7 @@ export default function ComparisonTable() {
         <div className="overflow-x-auto rounded-3xl border border-base-300">
           <table className="table w-full">
             <thead>
-              <tr className="bg-base-200 text-secondary">
+              <tr className="bg-base-200 text-secondary text-lg">
                 <th className="text-left py-5 px-6 font-display">Feature</th>
                 <th className="text-center py-5 px-6 font-display">Traditional Firms</th>
                 <th className="text-center py-5 px-6 font-display bg-primary/10 text-primary">
@@ -33,8 +33,8 @@ export default function ComparisonTable() {
             <tbody>
               {rows.map((row, i) => (
                 <tr key={i} className="border-t border-base-300">
-                  <td className="py-4 px-6 font-medium text-secondary">{row.label}</td>
-                  <td className="py-4 px-6 text-center text-secondary/60">
+                  <td className="py-4 px-6 font-medium text-secondary text-sm">{row.label}</td>
+                  <td className="py-4 px-6 text-center text-secondary/65">
                     {typeof row.trad === "boolean" ? (
                       row.trad ? (
                         <Check className="mx-auto text-secondary/40" size={18} />

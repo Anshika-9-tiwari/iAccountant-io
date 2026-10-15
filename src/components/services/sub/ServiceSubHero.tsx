@@ -36,13 +36,13 @@ export default function ServiceSubHero({
             {title}{" "}
             <span className={accentText}>{highlight}</span>
           </h1>
-          <p className="text-lg text-secondary/60 mt-6 max-w-lg">{desc}</p>
+          <p className="text-xl text-secondary/60 mt-6 max-w-lg">{desc}</p>
 
           <div className="flex flex-wrap gap-4 mt-8">
-            <Link href="/free-trial" className="btn btn-primary rounded-full px-6 text-white">
+            <Link href="/free-trial" className="btn btn-primary btn-md tracking-wide text-[15px] rounded-full px-6 text-white">
               Start Free Trial <ArrowRight size={18} />
             </Link>
-            <Link href="/pricing" className="btn btn-outline rounded-full px-6">
+            <Link href="/pricing" className="btn btn-outline btn-md tracking-wide text-[15px] rounded-full px-6">
               View Pricing
             </Link>
           </div>

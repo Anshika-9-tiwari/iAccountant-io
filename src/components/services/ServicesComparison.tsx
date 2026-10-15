@@ -36,13 +36,13 @@ export default function ServicesComparison() {
             <tbody>
               {rows.map((row, i) => (
                 <tr key={i} className="border-t border-base-300">
-                  <td className="py-4 px-6 font-medium text-secondary">{row.feature}</td>
+                  <td className="py-4 px-6 font-medium text-[15px] text-secondary">{row.feature}</td>
                   {row.values.map((v, j) => (
                     <td key={j} className="py-4 px-6 text-center">
                       {v ? (
-                        <Check className="mx-auto text-primary" size={18} />
+                        <Check className="mx-auto text-primary" size={20} />
                       ) : (
-                        <span className="text-secondary/20">—</span>
+                        <span className="text-secondary/40">—</span>
                       )}
                     </td>
                   ))}

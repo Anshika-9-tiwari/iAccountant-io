@@ -20,16 +20,16 @@ export default function CertificationGrid() {
               <div className="w-12 h-12 mx-auto rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
                 <Award className="text-primary" size={22} />
               </div>
-              <p className="font-display font-bold text-secondary text-sm leading-tight">
+              <p className="font-display font-bold text-secondary text-lg leading-tight">
                 {cert.name}
               </p>
-              <p className="text-secondary/50 text-xs mt-1">{cert.desc}</p>
+              <p className="text-secondary/65 text-sm mt-1">{cert.desc}</p>
             </div>
           ))}
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-secondary/60 text-sm max-w-xl mx-auto">
+          <p className="text-secondary/65 text-sm max-w-xl mx-auto">
             Need our SOC 2 report, ISO 27001 certificate, or security
             questionnaire for your compliance team?{" "}
             <a href="/contact-us" className="text-primary font-semibold">

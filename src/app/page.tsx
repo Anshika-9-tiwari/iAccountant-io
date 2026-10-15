@@ -13,15 +13,15 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <LogoMarquee />
-      <ServiceBento />
-      <ProcessSteps />
-      <ComparisonTable />
-      <StatsBand />
-      <PricingTeaser />
-      <SecurityStrip />
-      <TestimonialSection />
-      <FinalCTA />
+      <LogoMarquee/>
+      <ServiceBento/>
+      <ProcessSteps/>
+      <ComparisonTable/>
+      <StatsBand/>
+      <PricingTeaser/>
+      <SecurityStrip/>
+      <TestimonialSection/>
+      <FinalCTA/>
     </>
   );
 }

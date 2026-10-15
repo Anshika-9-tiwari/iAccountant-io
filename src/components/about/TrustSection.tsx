@@ -45,7 +45,7 @@ export default function TrustSection() {
               <h3 className="font-display font-bold text-lg text-secondary mb-2">
                 {p.title}
               </h3>
-              <p className="text-secondary/60 text-sm">{p.desc}</p>
+              <p className="text-secondary/65 text-sm">{p.desc}</p>
             </div>
           ))}
         </div>
@@ -53,7 +53,7 @@ export default function TrustSection() {
         {/* Certification badges */}
         <div className="flex flex-wrap justify-center gap-10 mt-10 pt-10 border-t border-base-300">
           {["SOC 2 Type II", "GDPR Compliant", "AICPA Member", "ISO 27001"].map((cert, i) => (
-            <span key={i} className="text-secondary/45 font-display font-semibold text-md tracking-wide">
+            <span key={i} className="text-secondary/65 font-display font-semibold text-md tracking-wide">
               {cert}
             </span>
           ))}

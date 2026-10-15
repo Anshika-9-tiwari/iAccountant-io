@@ -15,12 +15,12 @@ export default function SecurityStrip() {
         <div className="flex flex-wrap justify-center gap-8">
           {badges.map((b, i) => (
             <div key={i} className="flex items-center gap-3 text-secondary/70">
-              <b.icon className="text-primary" size={20} />
-              <span className="text-sm font-medium">{b.label}</span>
+              <b.icon className="text-primary" size={24} />
+              <span className="text-[17px] font-medium">{b.label}</span>
             </div>
           ))}
         </div>
-        <Link href="/data-security" className="btn btn-outline btn-sm rounded-full">
+        <Link href="/data-security" className="btn btn-outline text-[15px] btn-md px-6 rounded-full">
           Learn About Our Security →
         </Link>
       </div>

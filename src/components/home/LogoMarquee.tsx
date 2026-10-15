@@ -3,7 +3,7 @@ const logos = ["QuickBooks", "Xero", "Stripe", "Gusto", "NetSuite", "Bill.com", 
 export default function LogoMarquee() {
   return (
     <section className="py-10 border-y border-base-300 bg-base-100 overflow-hidden">
-      <p className="text-center text-sm text-secondary/50 mb-8">
+      <p className="text-center text-sm text-secondary/55 mb-10">
         Integrated with the tools you already use
       </p>
       <div className="flex animate-marquee whitespace-nowrap">

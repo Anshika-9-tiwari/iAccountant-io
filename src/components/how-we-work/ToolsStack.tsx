@@ -18,17 +18,17 @@ export default function ToolsStack() {
               key={i}
               className="bg-base-100 border border-base-300 rounded-2xl p-5 flex items-center gap-3 hover:border-primary hover:shadow-md transition-all"
             >
-              <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
                 <Plug className="text-primary" size={16} />
               </div>
-              <span className="font-medium text-secondary text-sm truncate">
+              <span className="font-medium text-secondary text-[17px] truncate">
                 {tool}
               </span>
             </div>
           ))}
         </div>
 
-        <p className="text-center text-secondary/50 text-sm mt-8">
+        <p className="text-center text-secondary/60 text-sm mt-8">
           Don&apos;t see your tool? <a href="/contact-us" className="text-primary font-semibold">Ask us — we probably support it.</a>
         </p>
       </div>

@@ -12,7 +12,7 @@ export default function SecurityCTA() {
               <h2 className="font-display text-3xl md:text-4xl font-bold text-white leading-tight">
                 Ready to hand off your books with confidence?
               </h2>
-              <p className="text-white/80 mt-4 max-w-lg">
+              <p className="text-white/85 mt-4 max-w-lg">
                 Thousands of businesses trust iAccounts.ai with their most
                 sensitive financial data. Here's your invitation to join them.
               </p>
@@ -21,13 +21,13 @@ export default function SecurityCTA() {
             <div className="flex flex-col sm:flex-row gap-4 lg:justify-end">
               <Link
                 href="/free-trial"
-                className="btn bg-white text-primary hover:bg-white/90 border-none rounded-full px-8"
+                className="btn bg-white text-primary text-[16px] hover:bg-white/90 border-none rounded-full px-6"
               >
                 Start Free Trial <ArrowRight size={18} />
               </Link>
               <Link
                 href="/contact-us"
-                className="btn btn-outline text-white border-white/60 rounded-full px-8 hover:bg-white hover:text-primary"
+                className="btn btn-outline text-white text-[16px] border-white/60 rounded-full px-6 hover:bg-white hover:text-primary"
               >
                 <FileText size={18} /> Request Security Docs
               </Link>

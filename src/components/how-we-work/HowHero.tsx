@@ -11,19 +11,19 @@ export default function HowHero() {
         <h1 className="font-display text-5xl lg:text-6xl font-bold text-secondary leading-[1.1] max-w-4xl mx-auto">
           Here&apos;s Exactly How We <span className="text-primary">Run Your Books.</span>
         </h1>
-        <p className="text-lg text-secondary/60 mt-6 max-w-2xl mx-auto">
+        <p className="text-[18.5px] text-secondary/65 mt-6 max-w-2xl mx-auto">
           Six repeatable steps — combining AI automation and certified human
           review — that turn messy financial data into clean, audit-ready books
           every single month.
         </p>
 
         <div className="flex flex-wrap gap-4 mt-10 justify-center">
-          <Link href="/free-trial" className="btn btn-primary rounded-full px-6 text-white">
+          <Link href="/free-trial" className="btn btn-primary btn-md tracking-wide text-[16px] rounded-full px-6 text-white">
             Start Free Trial <ArrowRight size={18} />
           </Link>
           <Link
             href="#process"
-            className="btn btn-outline text-secondary border-secondary/30 rounded-full px-6 hover:bg-white hover:text-secondary"
+            className="btn btn-outline btn-md tracking-wide text-[16px] text-secondary border-secondary/30 rounded-full px-6 hover:bg-white hover:text-secondary"
           >
             See the Process
           </Link>

@@ -24,21 +24,21 @@ export default function Hero() {
           <h1 className="font-display text-5xl lg:text-6xl font-bold text-secondary leading-[1.1]">
             Your Books, <span className="text-primary">Perfectly</span> Balanced.
           </h1>
-          <p className="text-lg text-secondary/60 mt-6 max-w-md">
+          <p className="text-lg text-secondary/60 text-[19px] mt-6 max-w-md">
             Bookkeeping, accounts payable & receivable, and tax preparation —
             automated by AI, verified by real accountants. Save 10+ hours every month.
           </p>
 
           <div className="flex flex-wrap gap-4 mt-8">
-            <Link href="/free-trial" className="btn btn-primary rounded-full px-6 text-white">
+            <Link href="/free-trial" className="btn btn-primary text-[16px] tracking-wide rounded-full px-6 text-white">
               Start Free Trial <ArrowRight size={18} />
             </Link>
-            <Link href="/contact-us" className="btn btn-outline rounded-full px-6">
+            <Link href="/contact-us" className="btn btn-outline text-[16px] tracking-wide rounded-full px-6">
               Book a Demo
             </Link>
           </div>
 
-          <div className="flex flex-wrap gap-6 mt-10 text-sm text-secondary/60">
+          <div className="flex flex-wrap gap-6 mt-10 text-[15px] text-secondary/66">
             <div className="flex items-center gap-2">
               <ShieldCheck size={18} className="text-primary" /> SOC 2 Compliant
             </div>
@@ -70,13 +70,13 @@ export default function Hero() {
               $
             </div>
             <div>
-              <p className="text-xs text-secondary/50">Monthly Close</p>
+              <p className="text-xs text-secondary/55">Monthly Close</p>
               <p className="font-bold text-secondary text-sm">Completed in 24hrs</p>
             </div>
           </div>
 
           <div className="absolute -top-6 -right-6 bg-base-100 rounded-2xl shadow-xl p-4 hidden md:block">
-            <p className="text-xs text-secondary/50">Accuracy Rate</p>
+            <p className="text-xs text-secondary/55">Accuracy Rate</p>
             <p className="font-bold text-primary text-lg">99.9%</p>
           </div>
         </div>

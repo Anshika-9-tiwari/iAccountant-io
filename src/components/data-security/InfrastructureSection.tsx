@@ -20,12 +20,12 @@ export default function InfrastructureSection() {
             eyebrow="Our Infrastructure"
             title="Six layers of defense between your data and the outside world"
           />
-          <p className="text-secondary/60 text-lg leading-relaxed mb-4">
+          <p className="text-secondary/65 text-lg leading-relaxed mb-4">
             We don't just rely on a single security measure. Every request to
             iAccounts.ai passes through multiple layers of hardened
             infrastructure — each independently monitored and audited.
           </p>
-          <p className="text-secondary/60 leading-relaxed">
+          <p className="text-secondary/65 leading-relaxed">
             Our stack runs entirely on AWS, inheriting their SOC 2, ISO 27001,
             and PCI DSS certifications on top of our own. If one layer fails,
             five more stand between an attacker and your financials.
@@ -49,7 +49,7 @@ export default function InfrastructureSection() {
                 </div>
                 <div className="flex-1">
                   <p className="font-semibold text-white text-sm">{layer.label}</p>
-                  <p className="text-white/65 text-xs tracking-wide">{layer.desc}</p>
+                  <p className="text-white/75 text-xs tracking-wide mt-0.5">{layer.desc}</p>
                 </div>
                 <span className="text-primary font-display font-bold text-sm">
                   0{i + 1}

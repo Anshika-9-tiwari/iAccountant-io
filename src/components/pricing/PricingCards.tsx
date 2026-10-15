@@ -138,7 +138,7 @@ export default function PricingCards({ plans }: { plans: Plan[] }) {
           })}
         </div>
 
-        <p className="text-center text-secondary/40 text-sm mt-8">
+        <p className="text-center text-secondary/60 text-sm mt-10">
           All plans include a 14-day free trial. No credit card required.
         </p>
       </div>

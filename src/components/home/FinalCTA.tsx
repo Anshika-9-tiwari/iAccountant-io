@@ -9,15 +9,15 @@ export default function FinalCTA() {
         <h2 className="font-display text-4xl md:text-5xl font-bold text-white max-w-3xl mx-auto leading-tight">
           Ready to simplify your books?
         </h2>
-        <p className="text-white/60 mt-6 max-w-lg mx-auto">
+        <p className="text-white/75 text-[16.5px] mt-6 max-w-lg mx-auto">
           Join 2,400+ businesses who trust iAccountant.io for accurate, AI-powered accounting.
         </p>
-        <div className="flex justify-center gap-4 mt-8 flex-wrap">
-          <Link href="/free-trial" className="btn btn-primary rounded-full px-8 text-white">
+        <div className="flex justify-center gap-5 mt-8 flex-wrap">
+          <Link href="/free-trial" className="btn btn-primary text-[16px] btn-md tracking-wide rounded-full px-6 text-white">
             Start Free Trial <ArrowRight size={18} />
           </Link>   
-          <a href="tel:+919810017750" 
-             className="btn btn-outline text-white border-white/50 rounded-full px-8 hover:bg-white hover:text-secondary">
+          <a href="tel:+18002948513" 
+             className="btn btn-outline text-white border-white/50 text-[16px] btn-md tracking-wide rounded-full px-6 hover:bg-white hover:text-secondary">
              <PhoneCall size={18} /> Talk to an Expert
           </a>
         </div>

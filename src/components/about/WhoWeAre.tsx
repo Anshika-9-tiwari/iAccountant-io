@@ -26,7 +26,7 @@ export default function WhoWeAre() {
             speed and confidence in every number.
           </p>
 
-          <ul className="space-y-4">
+          <ul className="space-y-3">
             {points.map((point, i) => (
               <li key={i} className="flex items-start gap-3">
                 <CheckCircle2 className="text-primary shrink-0 mt-0.5" size={22} />

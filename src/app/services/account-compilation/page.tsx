@@ -42,7 +42,7 @@ export default function CompilationPage() {
                   <h3 className="font-display font-bold text-xl text-secondary mb-2">
                     {f.title}
                   </h3>
-                  <p className="text-secondary/60">{f.desc}</p>
+                  <p className="text-secondary/70">{f.desc}</p>
                 </div>
               </div>
             ))}

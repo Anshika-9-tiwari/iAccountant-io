@@ -40,7 +40,7 @@ export default function BookkeepingPage() {
                 <h3 className="font-display font-bold text-lg text-secondary mb-2">
                   {f.title}
                 </h3>
-                <p className="text-secondary/60 text-sm">{f.desc}</p>
+                <p className="text-secondary/70 text-sm">{f.desc}</p>
               </div>
             ))}
           </div>
@@ -88,7 +88,7 @@ export default function BookkeepingPage() {
                   key={i}
                   className="flex justify-between py-3 border-b border-base-300 last:border-0"
                 >
-                  <span className="text-secondary/60 text-sm">{label}</span>
+                  <span className="text-secondary/65 text-sm">{label}</span>
                   <span className="font-display font-bold text-secondary">{val}</span>
                 </div>
               ))}

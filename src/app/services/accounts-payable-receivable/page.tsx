@@ -48,10 +48,10 @@ export default function APARPage() {
                     key={i}
                     className="flex items-start gap-3 py-2 border-b border-base-200 last:border-0"
                   >
-                    <span className="w-6 h-6 rounded-full bg-primary/10 text-primary text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="w-7 h-7 rounded-full bg-primary/10 text-primary text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
                       {i + 1}
                     </span>
-                    <span className="text-secondary/80 text-sm">{f}</span>
+                    <span className="text-secondary/85 font-medium text-[16px]">{f}</span>
                   </li>
                 ))}
               </ul>
@@ -74,10 +74,10 @@ export default function APARPage() {
                     key={i}
                     className="flex items-start gap-3 py-2 border-b border-white/10 last:border-0"
                   >
-                    <span className="w-6 h-6 rounded-full bg-primary/20 text-primary text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="w-7 h-7 rounded-full bg-primary/20 text-primary text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
                       {i + 1}
                     </span>
-                    <span className="text-secondary/80 text-sm">{f}</span>
+                    <span className="text-secondary/85 font-medium text-[16px]">{f}</span>
                   </li>
                 ))}
               </ul>

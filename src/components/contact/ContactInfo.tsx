@@ -10,7 +10,7 @@ const info = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+1 (800) 555-0199",
+    value: "+1 (800) 294-8513",
     sub: "Mon – Fri, 9 AM – 6 PM EST",
   },
   {
@@ -32,15 +32,15 @@ export default function ContactInfo() {
     <div className="space-y-6">
       {info.map((item, i) => (
         <div key={i} className="flex gap-4">
-          <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0">
+          <div className="w-13 h-13 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0">
             <item.icon className="text-primary" size={20} />
           </div>
           <div>
             <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-1">
               {item.label}
             </p>
-            <p className="font-semibold text-secondary">{item.value}</p>
-            <p className="text-secondary/50 text-sm">{item.sub}</p>
+            <p className="font-bold text-secondary text-[17px]">{item.value}</p>
+            <p className="text-secondary/60 font-medium text-sm">{item.sub}</p>
           </div>
         </div>
       ))}
@@ -54,8 +54,8 @@ export default function ContactInfo() {
           Book a 15-minute call with our team — no commitment, just answers.
         </p>
         <a
-          href="/free-trial"
-          className="btn btn-primary btn-sm rounded-full text-white"
+          href="tel:+18002948513"
+          className="btn btn-primary btn-md px-6 rounded-full text-white"
         >
           Book a Call
         </a>

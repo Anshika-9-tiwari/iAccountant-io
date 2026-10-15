@@ -33,7 +33,7 @@ export default function BentoCard({
         <h3 className={`font-display font-bold text-xl mb-2 ${dark ? "text-white" : "text-secondary"}`}>
           {title}
         </h3>
-        <p className={dark ? "text-white/60" : "text-secondary/60"}>{desc}</p>
+        <p className={dark ? "text-white/70" : "text-secondary/65"}>{desc}</p>
       </div>
       <ArrowUpRight
         className={`absolute top-7 right-7 opacity-0 group-hover:opacity-100 transition-opacity ${

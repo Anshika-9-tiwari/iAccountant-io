@@ -24,13 +24,13 @@ export default function ProcessSteps() {
               <h3 className="font-display font-bold text-lg text-secondary mt-2 mb-2">
                 {step.title}
               </h3>
-              <p className="text-secondary/60 text-sm">{step.desc}</p>
+              <p className="text-secondary/65 text-sm">{step.desc}</p>
             </div>
           ))}
         </div>
 
         <div className="text-center mt-14">
-          <Link href="/how-we-work" className="btn btn-outline btn-primary rounded-full px-6">
+          <Link href="/how-we-work" className="btn btn-outline btn-md text-[16px] tracking-wide btn-primary rounded-full px-6">
             See Full Process →
           </Link>
         </div>

@@ -21,13 +21,13 @@ export default function HowCTA() {
             <div className="flex flex-col sm:flex-row gap-4 lg:justify-end">
               <Link
                 href="/free-trial"
-                className="btn bg-white text-primary hover:bg-white/90 border-none rounded-full px-8"
+                className="btn bg-white btn-md tracking-wide text-[16px] text-primary hover:bg-white/90 border-none rounded-full px-6"
               >
                 Start Free Trial <ArrowRight size={18} />
               </Link>
 
-              <a href="tel:+919810017750" 
-                className="btn btn-outline text-white border-white/60 rounded-full px-8 hover:bg-white hover:text-primary">
+              <a href="tel:+18002948513" 
+                className="btn btn-outline btn-md tracking-wide text-[16px] text-white border-white/60 rounded-full px-6 hover:bg-white hover:text-primary">
                 <PhoneCall size={18} /> Book a Call
               </a>
 

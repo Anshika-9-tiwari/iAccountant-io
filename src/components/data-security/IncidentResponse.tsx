@@ -37,7 +37,7 @@ export default function IncidentResponse() {
         </div>
 
         <div className="mt-12 bg-white/5 border border-white/30 rounded-2xl p-6 max-w-2xl mx-auto text-center">
-          <p className="text-white/75 text-sm">
+          <p className="text-white/85 text-sm">
             Report a security concern directly to our team:{" "}
             <a
               href="mailto:info@iaccountant.io"

@@ -19,7 +19,7 @@ export default function AboutHero() {
             <Users className="text-primary" size={28} />
             <div>
               <p className="font-display font-bold text-xl text-secondary">120+</p>
-              <p className="text-xs text-secondary/50">Accountants & Engineers</p>
+              <p className="text-xs text-secondary/60">Accountants & Engineers</p>
             </div>
           </div>
         </div>
@@ -33,23 +33,23 @@ export default function AboutHero() {
             We Believe Accounting Should Feel{" "}
             <span className="text-primary">Effortless.</span>
           </h1>
-          <p className="text-lg text-secondary/60 mt-6 max-w-lg">
+          <p className="text-[18.5px] text-secondary/60 mt-6 max-w-lg">
             Founded by accountants and AI engineers frustrated with outdated
-            bookkeeping practices, iAccountant.io was built to give businesses
+            bookkeeping practices, <span className="text-primary font-medium">iAccountant.io</span> was built to give businesses
             real-time financial clarity — without the overhead of a traditional
             finance department.
           </p>
 
           <div className="flex flex-wrap gap-4 mt-8">
-            <Link href="/free-trial" className="btn btn-primary rounded-full px-6 text-white">
+            <Link href="/free-trial" className="btn btn-primary btn-md tracking-wide text-[15px] rounded-full px-6 text-white">
               Start Free Trial <ArrowRight size={18} />
             </Link>
-            <Link href="/services" className="btn btn-outline rounded-full px-6">
+            <Link href="/services" className="btn btn-outline btn-md tracking-wide text-[15px] rounded-full px-6">
               Explore Our Services
             </Link>
           </div>
 
-          <div className="flex items-center gap-2 mt-10 text-sm text-secondary/60">
+          <div className="flex items-center gap-2 mt-10 text-sm text-secondary/65">
             <Globe2 size={18} className="text-primary" />
             Serving businesses across 12+ industries, in 4 countries.
           </div>
