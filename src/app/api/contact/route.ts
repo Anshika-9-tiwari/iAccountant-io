@@ -1,12 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { sendEmail } from "@/lib/email";
+import {contactConfirmationEmail, internalLeadNotificationEmail} from "@/lib/email-templates";
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
     const { name, email, phone, company, message } = body;
 
-    // Validation
+    // ── Validation ──
     if (!name || !email || !message) {
       return NextResponse.json(
         { error: "Name, email, and message are required." },
@@ -22,13 +24,14 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    if (message.length < 10) {
+    if (message.length < 5) {
       return NextResponse.json(
-        { error: "Message must be at least 10 characters." },
+        { error: "Message must be at least 5 characters." },
         { status: 400 }
       );
     }
 
+    // ── Save to DB ──
     const submission = await prisma.contactSubmission.create({
       data: {
         name: name.trim(),
@@ -37,6 +40,29 @@ export async function POST(req: NextRequest) {
         company: company?.trim() || null,
         message: message.trim(),
       },
+    });
+
+    // ── Send emails (non-blocking — don't fail the request if email breaks) ──
+    const firstName = name.trim().split(" ")[0];
+
+    // 1. Confirmation to the user
+    sendEmail({
+      to: email.trim().toLowerCase(),
+      subject: "We received your message — iAccountant.io",
+      html: contactConfirmationEmail(firstName),
+    });
+
+    // 2. Internal notification to your team
+    sendEmail({
+      to: process.env.SMTP_USER!, // or a dedicated inbox like leads@iaccounts.ai
+      subject: `🔔 New Contact: ${name.trim()}`,
+      html: internalLeadNotificationEmail({
+        type: "Contact",
+        name: name.trim(),
+        email: email.trim().toLowerCase(),
+        company: company?.trim(),
+        details: message.trim(),
+      }),
     });
 
     return NextResponse.json(

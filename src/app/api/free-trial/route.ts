@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { sendEmail } from "@/lib/email";
+import { trialWelcomeEmail, internalLeadNotificationEmail } from "@/lib/email-templates";
 
 const VALID_SERVICES = [
   "bookkeeping",
@@ -8,12 +10,19 @@ const VALID_SERVICES = [
   "account-compilation",
 ];
 
+const SERVICE_LABELS: Record<string, string> = {
+  "bookkeeping": "Bookkeeping",
+  "accounts-payable-receivable": "AP & AR",
+  "tax-preparation": "Tax Preparation",
+  "account-compilation": "Account Compilation",
+};
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
     const { fullName, email, phone, companyName, servicesNeeded, employeeCount } = body;
 
-    // Validation
+    // ── Validation ──
     if (!fullName || !email || !companyName) {
       return NextResponse.json(
         { error: "Full name, email, and company name are required." },
@@ -46,6 +55,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // ── Save to DB ──
     const lead = await prisma.freeTrialLead.create({
       data: {
         fullName: fullName.trim(),
@@ -55,6 +65,33 @@ export async function POST(req: NextRequest) {
         servicesNeeded,
         employeeCount: employeeCount?.trim() || null,
       },
+    });
+
+    // ── Send emails (non-blocking) ──
+    const firstName = fullName.trim().split(" ")[0];
+
+    // 1. Welcome email to the user
+    sendEmail({
+      to: email.trim().toLowerCase(),
+      subject: "Welcome to iAccountant.io — Your trial is being set up! 🎉",
+      html: trialWelcomeEmail(firstName, companyName.trim()),
+    });
+
+    // 2. Internal notification to your team 
+    const serviceNames = servicesNeeded
+      .map((s: string) => SERVICE_LABELS[s] || s)
+      .join(", ");
+
+    sendEmail({
+      to: process.env.SMTP_USER!,
+      subject: `🔔 New Trial Lead: ${fullName.trim()} (${companyName.trim()})`,
+      html: internalLeadNotificationEmail({
+        type: "Free Trial",
+        name: fullName.trim(),
+        email: email.trim().toLowerCase(),
+        company: companyName.trim(),
+        details: `Services: ${serviceNames}${employeeCount ? ` | Employees: ${employeeCount}` : ""}`,
+      }),
     });
 
     return NextResponse.json(
