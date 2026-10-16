@@ -32,7 +32,7 @@ export default function EngagementModels() {
         </div>
 
         <div className="text-center mt-12">
-          <a href="tel:+9198100 17750"
+          <a href="tel:+18002948513"
             className="btn btn-primary rounded-full px-6 text-white"
            >
              Not sure which fits? Talk to us 

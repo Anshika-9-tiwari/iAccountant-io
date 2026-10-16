@@ -17,7 +17,7 @@ export const processSteps = [
     desc: "We start with a short call to understand your business, chart of accounts, and reporting needs. You'll get a dedicated onboarding specialist who guides you through every setup step.",
     checklist: [
       "Discovery call to map your finance workflow",
-      "Secure bank & accounting software connection",
+      "Secure  accounting software connection",
       "Chart of accounts audit and cleanup",
       "Dedicated account manager assigned",
     ],

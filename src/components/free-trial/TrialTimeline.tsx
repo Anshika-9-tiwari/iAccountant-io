@@ -9,7 +9,7 @@ const steps = [
   {
     icon: DatabaseZap,
     title: "We connect your data",
-    desc: "Securely link your bank accounts and accounting software. We handle the migration.",
+    desc: "Securely link your  accounting software. We handle the migration.",
   },
   {
     icon: BarChart3,
